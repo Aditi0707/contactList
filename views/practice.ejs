@@ -9,6 +9,22 @@
     </title>
 </head>
 <body>
-    <h1>Rendered from EJS view</h1>
+    <h1>practising ejs</h1>
+
+    <ul>
+       <% for(let i = 1; i<6; i++){ %>
+          <li>
+              <%= i%>
+          </li>
+      <%}%>
+    </ul>
+
+    <% if(true){ %>
+      <h1>It's true</h1>
+    <%}else{%>
+    <p>Its false</p>
+    <%}%>
+
+
 </body>
 </html>
