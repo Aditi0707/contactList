@@ -3,8 +3,8 @@ body{
     /* text-align: center; */
     /* align-items: center; */
     color: blue;
-    color: rgb(121, 115, 115);
-    border: 2px solid yellow;
+    /* color: rgb(121, 115, 115); */
+    /* border: 2px solid yellow; */
     justify-content: center;
     align-items: center;
 
@@ -13,21 +13,34 @@ body{
 
 #heading{
     font-size: 2.8rem;
+    color:  rgb(121, 115, 115);
 }
 
 #list{
     list-style: none;
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
+    border: 2px solid rgb(110, 107, 107);
+    background-color: blue;
+    padding: 1px;
+    height: 35px;
     width: 90%;
     align-items: center;
+   color: white;
+   font-size: 1.3rem;
+    letter-spacing: 1.2px;
+
     
+}
+
+li p{
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #contact{
     
     width: 35%;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     align-items: center;
 }
