@@ -7,15 +7,17 @@
     <title>
         <%= title%>
     </title>
+    <!-- <link rel="stylesheet" href="/css/home.css"> -->
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <h1>Contact List</h1>
-
+    <h1 id="heading">My Contacts List</h1>
+<div id="contact">
     <ul>
 
 
         <% for(let i of contact_list){%>
-            <li>
+            <li id="list">
                 <p><%=i.Name%></p>
                 <p><%=i.phone%></p>
             </li>
@@ -26,15 +28,17 @@
 
     </ul>
 
+</div>
+
     <form action="/create-contact" method="post">
 
-        <input type="text" name="Name" placeholder="Enter name ">
-        <input type="number" name="phone" placeholder="Enter phone no.">
+        <input type="text" name="Name" placeholder="Enter name " required>
+        <input type="number" name="phone" placeholder="Enter phone no." required>
         <button type="submit">Submit</button>
 
     </form>
 
-   
-
+  
+<script src="/js/home.js"></script>
 </body>
 </html>

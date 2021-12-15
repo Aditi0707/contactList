@@ -1,0 +1,1 @@
+console.log('script files are loaded');

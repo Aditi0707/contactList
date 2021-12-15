@@ -5,6 +5,21 @@ const port = 8000;
 
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+//parser data from form
+app.use(express.urlencoded());
+
+//middleware
+app.use(express.static('assests'));
+// console.log("aditi");
+
+//middleware1
+// app.use(function(req,res,next){
+//   console.log('middleware 1 called');
+//   next();
+// })
+
 contactList = [
   {"Name": "Aditi" ,
     "phone":"21203182"
@@ -21,11 +36,6 @@ contactList = [
 ]
 
 
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-//parser data from form
-app.use(express.urlencoded());
 
 app.get('/', function(req,res){
   return res.render('home', {
