@@ -1,5 +1,6 @@
 
 const express = require('express');
+// const req = require('express/lib/request');
 const path = require('path');
 const port = 8000;
 
@@ -55,6 +56,21 @@ app.post('/create-contact', (req, res) => {
   contactList.push(req.body,);
    return res.redirect('/');
 })
+
+app.get('/delete-contact/:phone', function(req,res){
+
+let phone=req.params.phone;
+
+for(var i = 0;i<contactList.length;i++){
+ 
+  if(contactList[i].phone==phone){
+    contactList.splice(i, 1);
+    
+    return res.redirect('/');
+  }
+}
+
+});
 
 app.listen(port, function(err){
 

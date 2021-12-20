@@ -44,3 +44,7 @@ li p{
     /* border: 2px solid blue; */
     align-items: center;
 }
+
+.delete a{
+  color: red;
+}
