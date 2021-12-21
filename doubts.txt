@@ -1,3 +1,13 @@
 My First Express App :: A List of Contacts!
 rendering our first page
 3 parsing data from form
+
+
+
+app.get('/delete-contact/:phone', (req,res)=>{
+console.log(req.params);
+// let phone=req.params.phone;
+// console.log(req.params.phone);
+// console.log(phone);
+
+});
